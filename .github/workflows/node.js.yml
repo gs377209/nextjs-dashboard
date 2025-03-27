@@ -9,6 +9,25 @@ on:
   pull_request:
     branches: ["main"]
 
+env:
+  DATABASE_URL: ${{ secrets.DATABASE_URL }}
+  DATABASE_URL_UNPOOLED: ${{ secrets.DATABASE_URL_UNPOOLED }}
+  PGHOST: ${{ secrets.PGHOST }}
+  PGHOST_UNPOOLED: ${{ secrets.PGHOST_UNPOOLED }}
+  PGUSER: ${{ secrets.PGUSER }}
+  PGDATABASE: ${{ secrets.PGDATABASE }}
+  PGPASSWORD: ${{ secrets.PGPASSWORD }}
+  POSTGRES_URL: ${{ secrets.POSTGRES_URL }}
+  POSTGRES_URL_NON_POOLING: ${{ secrets.POSTGRES_URL_NON_POOLING }}
+  POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+  POSTGRES_HOST: ${{ secrets.POSTGRES_HOST }}
+  POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+  POSTGRES_DATABASE: ${{ secrets.POSTGRES_DATABASE }}
+  POSTGRES_URL_NO_SSL: ${{ secrets.POSTGRES_URL_NO_SSL }}
+  POSTGRES_PRISMA_URL: ${{ secrets.POSTGRES_PRISMA_URL }}
+  AUTH_SECRET: ${{ secrets.AUTH_SECRET }}
+  AUTH_TRUST_HOST: ${{ secrets.AUTH_TRUST_HOST }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
